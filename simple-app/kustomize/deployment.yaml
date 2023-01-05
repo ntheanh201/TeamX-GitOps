@@ -4,6 +4,7 @@ metadata:
   name: teamx-gitops-simple-app
   labels:
     app: teamx-gitops-simple-app
+  namespace: teamx
 spec:
   replicas: 1
   template:
@@ -17,6 +18,8 @@ spec:
           image: ghcr.io/ntheanh201/teamx-gitops-demo:latest
           imagePullPolicy: Always
       restartPolicy: Always
+      imagePullSecrets:
+        - name: ghcr-key
   selector:
     matchLabels:
       app: teamx-gitops-simple-app
