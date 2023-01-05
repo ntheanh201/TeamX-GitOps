@@ -13,9 +13,9 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/codefresh-contrib/gitops-certification-examples
+    repoURL: https://github.com/ntheanh201/teamx-gitops
     targetRevision: HEAD
-    path: ./argo-rollouts-controller
+    path: ./argo-rollouts
 
   # Destination cluster and namespace to deploy the application
   destination:
