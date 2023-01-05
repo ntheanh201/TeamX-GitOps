@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teamx-gitops-simple-argo
+  labels:
+    app: teamx-gitops-simple-argo
+  namespace: teamx
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: teamx-gitops-simple-argo
+      labels:
+        app: teamx-gitops-simple-argo
+    spec:
+      containers:
+        - name: teamx-gitops-simple-argo
+          image: ghcr.io/ntheanh201/teamx-gitops-demo:latest
+          imagePullPolicy: Always
+      restartPolicy: Always
+      imagePullSecrets:
+        - name: ghcr-key
+  selector:
+    matchLabels:
+      app: teamx-gitops-simple-argo

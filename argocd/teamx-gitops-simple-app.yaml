@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/ntheanh201/TeamX-GitOps.git
     targetRevision: HEAD
-    path: ./simple-app/kustomize/overlays/argo
+    path: ./simple-argo/kustomize/overlays/dev
 
   # Destination cluster and namespace to deploy the application
   destination:
