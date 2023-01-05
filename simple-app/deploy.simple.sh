@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global user.email "nthean201@gmail.com"
+git config --global user.email "ntheanh201@gmail.com"
 git config --global user.name "Bot CI"
 
 echo "====== PULL ======"
