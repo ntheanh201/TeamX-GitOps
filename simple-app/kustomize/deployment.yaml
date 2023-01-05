@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teamx-gitops-simple-app
+  labels:
+    app: teamx-gitops-simple-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: teamx-gitops-simple-app
+      labels:
+        app: teamx-gitops-simple-app
+    spec:
+      containers:
+        - name: teamx-gitops-simple-app
+          image: ghcr.io/ntheanh201/teamx-gitops-demo:latest
+          imagePullPolicy: Always
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: teamx-gitops-simple-app
