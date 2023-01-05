@@ -8,7 +8,7 @@ git pull
 
 echo "====== UPDATE IMAGE VERSION ======"
 echo $TAG
-sed -i "s/teamx-gitops-demo:.*/teamx-gitops-demo:$TAG/g" kustomize/deployment_patch.yaml
+sed -i "s/teamx-gitops-demo:.*/teamx-gitops-demo:$TAG/g" kustomize/overlays/argo/deployment_patch.yaml
 
 if [[ $(git status --porcelain) ]]; then
   echo "====== COMMIT NEW CHANGES ======"

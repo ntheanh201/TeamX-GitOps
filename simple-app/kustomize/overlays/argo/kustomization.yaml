@@ -1,11 +1,13 @@
 resources:
-  - deployment.yaml
+  - ../../base
   - service.yaml
+
+namePrefix: argo-
 
 patches:
   - path: deployment_patch.yaml
     target:
-      version: v1
+      version: v0
       group: apps
       kind: Deployment
       name: teamx-gitops-simple-app

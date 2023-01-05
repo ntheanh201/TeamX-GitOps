@@ -1,0 +1,13 @@
+resources:
+  - ../../base
+  - service.yaml
+
+namePrefix: circle-
+
+patches:
+  - path: deployment_patch.yaml
+    target:
+      version: v0
+      group: apps
+      kind: Deployment
+      name: teamx-gitops-simple-app
