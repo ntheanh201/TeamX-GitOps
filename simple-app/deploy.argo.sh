@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git config --global user.email "ntheanh201@gmail.com"
-git config --global user.name "CircleCI"
+git config --global user.name "CircleCI + ArgoCD"
 
 echo "====== PULL ======"
 git pull
@@ -9,10 +9,6 @@ git pull
 echo "====== UPDATE IMAGE VERSION ======"
 echo $TAG
 sed -i "s/teamx-gitops-demo:.*/teamx-gitops-demo:$TAG/g" kustomize/deployment_patch.yaml
-
-echo "====== K8S ======"
-cd kustomize
-kustomize build . | k3s kubectl apply -f -
 
 if [[ $(git status --porcelain) ]]; then
   echo "====== COMMIT NEW CHANGES ======"
