@@ -13,7 +13,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/ntheanh201/gitops-certification-examples.git
+    repoURL: https://github.com/codefresh-contrib/gitops-certification-examples
     targetRevision: HEAD
     path: ./argo-rollouts-controller
 
