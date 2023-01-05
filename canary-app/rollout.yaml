@@ -24,10 +24,10 @@ spec:
     canary:
       stableService: summer-k8s-service-stable
       canaryService: summer-k8s-service-canary
-      trafficRouting:
-        ambassador:
-          mappings:
-            - summer-k8s-mapping
+      # trafficRouting:
+      #   ambassador:
+      #     mappings:
+      #       - summer-k8s-mapping
       steps:
         - setWeight: 30
         - pause: { duration: 2m }
