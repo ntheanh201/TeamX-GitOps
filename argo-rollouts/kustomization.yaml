@@ -1,3 +1,4 @@
 resources:
   - ns.yaml
-  - https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+  - install.yaml
+  # - https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
