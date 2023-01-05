@@ -1,3 +1,11 @@
 resources:
   - deployment.yaml
   - service.yaml
+
+patches:
+  - path: deployment_patch.yaml
+    target:
+      version: v1
+      group: apps
+      kind: Deployment
+      name: teamx-gitops-simple-app
