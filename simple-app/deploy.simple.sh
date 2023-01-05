@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cho $TAG
 echo "====== PULL ======"
 git pull
 
