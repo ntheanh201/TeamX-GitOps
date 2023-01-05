@@ -1,6 +1,5 @@
 resources:
   - ../../base
-  - service.yaml
 
 namePrefix: argo-
 
@@ -11,3 +10,9 @@ patches:
       group: apps
       kind: Deployment
       name: teamx-gitops-simple-app
+  - path: service_patch.yaml
+    target:
+      version: v1
+      kind: Service
+      name: teamx-gitops-simple-app
+
