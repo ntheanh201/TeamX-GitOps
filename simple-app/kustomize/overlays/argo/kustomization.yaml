@@ -7,7 +7,7 @@ namePrefix: argo-
 patches:
   - path: deployment_patch.yaml
     target:
-      version: v0
+      version: v1
       group: apps
       kind: Deployment
       name: teamx-gitops-simple-app
