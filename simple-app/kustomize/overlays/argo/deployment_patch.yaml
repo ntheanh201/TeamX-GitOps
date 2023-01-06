@@ -1,3 +1,3 @@
 - op: replace
   path: "/spec/template/spec/containers/0/image"
-  value: ghcr.io/ntheanh201/teamx-gitops-demo:2.0
+  value: ghcr.io/ntheanh201/teamx-gitops-demo:22e5499ab53ab692aa2e4cbb5f4210a71f66ad6b
